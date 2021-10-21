@@ -1,0 +1,16 @@
+[
+  {
+    "name": "revised",
+    "path": "/revised",
+    "component": "/Users/lincolngarcia/Documents/GitHub/svu-nav-bar/pages/revised/index.vue",
+    "chunkName": "pages/revised/index",
+    "_name": "_5c67071a"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/lincolngarcia/Documents/GitHub/svu-nav-bar/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_19675456"
+  }
+]
