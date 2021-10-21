@@ -1,16 +1,14 @@
 [
   {
-    "name": "revised",
-    "path": "/revised",
-    "component": "/Users/lincolngarcia/Documents/GitHub/svu-nav-bar/pages/revised/index.vue",
-    "chunkName": "pages/revised/index",
-    "_name": "_5c67071a"
+    "name": "revised-index_og",
+    "path": "/revised/index_og",
+    "component": "/Users/lincolngarcia/Documents/GitHub/svu-nav-bar/pages/revised/index_og.vue",
+    "chunkName": "pages/revised/index_og"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/lincolngarcia/Documents/GitHub/svu-nav-bar/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_19675456"
+    "chunkName": "pages/index"
   }
 ]
