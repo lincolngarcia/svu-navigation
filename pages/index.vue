@@ -1,5 +1,5 @@
 <template>
- <!--
+  <!--
         NOTES::
         1. ADD EVENT LISTENER PREVENTS PAGE FROM LOADING
         2. SCRIPT NOT TESTED
@@ -7,15 +7,22 @@
         4. DIV WILL NOT TAKE UP FULL SCREEN
         5. SOCIAL MEDIA ICONS NEED TO BE UPDATED WITH NEW THEME
         6. WRAPPING DIV NEEDS TO WRAP ON ANYMORE THAN 3 ELEMENTS
-        7. PAGE LINKS ARE KEPT FROM WRAPPING; GOOD IDEA OR NOT? SCRIPT-RIGHTCONTENTITEMS
+
         8. OPENING THE NAV SCRIPT DOES NOT EXIST
+
+
+        DO LEFT NAV REWRITE;
   -->
-  <div id="nav" class="flex absolute">
+  <div id="nav" class="flex">
     <div id="left" class="left">
       <div id="nav.left.header" class="flex header">
-        <img src="~/assets/png/Southern Virginia Logo.png" class="mainLogo relative" />
-        <a class="standardText" href=""
-          >Contact Us <img class="contactUs" src="~/assets/png/Arrow+Circle.png"
+        <img
+          src="~/assets/png/Southern Virginia Logo.png"
+          class="mainLogo relative"
+        />
+        <a class="standardText contactUs" href=""
+          >Contact Us
+          <img class="ContactUsImage" src="~/assets/png/Arrow+Circle.png"
         /></a>
       </div>
       <div id="nav.left.content" class="relative leftContentItems">
@@ -65,8 +72,9 @@
     </div>
     <div id="nav.right" class="relative right">
       <img
-        id='closeButton'
-        class="absolute closeButton"
+        @click="navClose"
+        id="closeButton"
+        class="closeButton"
         src="~/assets/png/Close Menu icon.png"
       />
       <div id="nav.right.content" class="relative wrap rightContentItems">
@@ -81,14 +89,14 @@
           </ul>
         </div>
         <div id="nav.right.content.church_&_faith">
-            <h4>Church & Faith</h4>
-            <ul>
-              <li>Church Alignment</li>
-              <li>YSA Stake & Wards</li>
-              <li>Institute of Religion</li>
-              <li>Missionaries</li>
-            </ul>
-          </div>
+          <h4>Church & Faith</h4>
+          <ul>
+            <li>Church Alignment</li>
+            <li>YSA Stake & Wards</li>
+            <li>Institute of Religion</li>
+            <li>Missionaries</li>
+          </ul>
+        </div>
         <div id="nav.right.content.giving">
           <h4>Giving</h4>
           <ul>
@@ -170,39 +178,37 @@
 </template>
 
 <script>
-export default {};
-//document.getElementById("closeButton").addEventListener("click",navClose);
-function navClose() {
-  console.log("yes");
-  let id = null;
-  const nav = document.getElementById("nav");
-  var width = 100;
-  clearInterval(id);
-  id = setInterval(frame(), 10);
-  function frame() {
-    if (id == 0) {
+export default {
+  methods: {
+    navClose() {
+      let id = null;
+      const nav = document.getElementById("nav");
+      var width = 100;
       clearInterval(id);
-    } else {
-      width = width - 1;
-      nav.style.maxWidth = width + "%";
+      id = setInterval(frame(), 10);
+      function frame() {
+        if (id == 0) {
+          clearInterval(id);
+        } else {
+          width = width - 1;
+          nav.style.maxWidth = width + "%";
+        }
+      }
     }
   }
-}
+};
 </script>
 
 <style scoped>
 .flex {
   display: flex;
 }
-.absolute {
-  position: absolute;
-}
 .relative {
   position: relative;
 }
 .wrap {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .left {
   background-color: #9e1b32;
@@ -221,8 +227,8 @@ function navClose() {
   margin-right: 32px;
 }
 .footer {
-    margin-left: 15%;
-    margin-top: 5%;
+  margin-left: 15%;
+  margin-top: 5%;
 }
 .mainLogo {
   max-width: 133px;
@@ -230,13 +236,17 @@ function navClose() {
   top: -8px;
 }
 .contactUs {
-  display: inline;
+  display: flex;
+  align-items: center;
+}
+.ContactUsImage {
+  margin-left: 0.5rem;
   max-height: 20px;
 }
 .closeButton {
-    right: 0px;
-    top: 0px;
-    max-height: 16px;
+  right: 0px;
+  top: 0px;
+  max-height: 16px;
 }
 .standardText {
   color: white;
@@ -259,19 +269,19 @@ div.rightContentItems > div > h4 {
   font-weight: 18px;
   white-space: nowrap;
 }
-div.rightContentItems > div> ul > li {
+div.rightContentItems > div > ul > li {
   color: #707070;
   font-family: "Avenir Next";
   font-size: 16px;
   white-space: nowrap;
 }
 div.rightContentItems > div {
-    padding: 16px;
+  padding: 16px;
 }
 div.socialCircles {
-    background-color: #fff;
-    height: 18px;
-    width: 18px;
-    opacity: 0.7;
+  background-color: #fff;
+  height: 18px;
+  width: 18px;
+  opacity: 0.7;
 }
 </style>
