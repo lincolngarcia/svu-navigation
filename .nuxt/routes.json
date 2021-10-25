@@ -2,7 +2,7 @@
   {
     "name": "index",
     "path": "/",
-    "component": "/Users/lincolngarcia/Documents/GitHub/svu-nav-bar/pages/index.vue",
+    "component": "/Users/lincolngarcia/Documents/GitHub/svu-navigation/pages/index.vue",
     "chunkName": "pages/index"
   }
 ]

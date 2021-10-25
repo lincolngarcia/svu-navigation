@@ -195,10 +195,10 @@ function navClose() {
   display: flex;
 }
 .absolute {
-  display: absolute;
+  position: absolute;
 }
 .relative {
-  display: relative;
+  position: relative;
 }
 .wrap {
     display: flex;
