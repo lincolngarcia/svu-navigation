@@ -15,6 +15,19 @@
   -->
   <div id="nav" class="flex">
     <div id="left" class="left">
+
+
+
+
+
+      <div id='nav.content' class='left'>
+
+      </div>
+
+
+
+
+<!--
       <div id="nav.left.header" class="flex header">
         <img
           src="~/assets/png/Southern Virginia Logo.png"
@@ -38,7 +51,7 @@
       </div>
       <div id="nav.left.footer" class="standardText footer">
         <img src="~/assets/png/Social Media Icons.png" />
-        <!-- <ol id="nav.left.footer.social_list" class='socialCircles'>
+        -- <ol id="nav.left.footer.social_list" class='socialCircles'>
         <li>
           <a href="https://www.instagram.com/svuedu/" data-toggle="tooltip" title="" data-original-title="Instagram">
               <img src="/wp-content/uploads/instagram.png">
@@ -64,12 +77,18 @@
               <img src="/wp-content/uploads/linkedin.png">
           </a>
         </li>
-      </ol> -->
+      </ol> --
         <br />
         <p>News</p>
         <p>Calendar & Events</p>
       </div>
     </div>
+
+
+
+
+
+-->
     <div id="nav.right" class="relative right">
       <img
         @click="navClose"
@@ -213,6 +232,7 @@ export default {
 .left {
   background-color: #9e1b32;
   width: 40%;
+  padding-left: 15%
 }
 .right {
   width: 60%;
@@ -260,8 +280,6 @@ div.leftContentItems {
   font-size: 36px;
   font-weight: 600;
   font-family: "Avenir Next";
-  margin-left: 15%;
-  margin-top: 5%;
 }
 div.rightContentItems > div > h4 {
   color: #9e1b32;
