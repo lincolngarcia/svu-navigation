@@ -14,21 +14,8 @@
         DO LEFT NAV REWRITE;
   -->
   <div id="nav" class="flex">
-    <div id="left" class="left">
-
-
-
-
-
-      <div id='nav.content' class='left'>
-
-      </div>
-
-
-
-
-<!--
-      <div id="nav.left.header" class="flex header">
+    <div id="nav.left" class="left">
+      <div id="nav.content.header" class="flex header">
         <img
           src="~/assets/png/Southern Virginia Logo.png"
           class="mainLogo relative"
@@ -38,8 +25,8 @@
           <img class="ContactUsImage" src="~/assets/png/Arrow+Circle.png"
         /></a>
       </div>
-      <div id="nav.left.content" class="relative leftContentItems">
-        <ul>
+      <div id="nav.left.content" class="left-padding">
+        <ul class="leftContentItems">
           <li>Mission</li>
           <li>Academics</li>
           <li>Our Virginia Home</li>
@@ -48,10 +35,20 @@
           <li>Tuition & Aid</li>
           <li>Apply</li>
         </ul>
+        <br />
+        <br />
+        <div id="nav.content.bottomRow" class="flex">
+          <img src="~/assets/png/Social Media Icons.png" />
+          <!-- insert updated social media icons here -->
+        </div>
+        <br />
+        <p class="standardText">News</p>
+        <p class="standardText">Calendar & Events</p>
       </div>
-      <div id="nav.left.footer" class="standardText footer">
-        <img src="~/assets/png/Social Media Icons.png" />
-        -- <ol id="nav.left.footer.social_list" class='socialCircles'>
+    </div>
+
+    <!--
+      <ol id="nav.left.footer.social_list" class='socialCircles'>
         <li>
           <a href="https://www.instagram.com/svuedu/" data-toggle="tooltip" title="" data-original-title="Instagram">
               <img src="/wp-content/uploads/instagram.png">
@@ -77,17 +74,7 @@
               <img src="/wp-content/uploads/linkedin.png">
           </a>
         </li>
-      </ol> --
-        <br />
-        <p>News</p>
-        <p>Calendar & Events</p>
-      </div>
-    </div>
-
-
-
-
-
+      </ol>
 -->
     <div id="nav.right" class="relative right">
       <img
@@ -201,15 +188,24 @@ export default {
   methods: {
     navClose() {
       let id = null;
+      console.log("command 1: id is (null) =" + id);
       const nav = document.getElementById("nav");
+      console.log("command 2: nav is called:" + nav);
       var width = 100;
+      console.log("command 3: width is (100) =" + width);
       clearInterval(id);
       id = setInterval(frame(), 10);
+      console.log("command 4: id is now an interval =" + id);
       function frame() {
+        console.log("frame has been called");
         if (id == 0) {
+          console.log("id is 0: clearing interval");
           clearInterval(id);
+          console.log(id);
         } else {
+          console.log("id is not 0");
           width = width - 1;
+          console.log("width is: " + width);
           nav.style.maxWidth = width + "%";
         }
       }
@@ -231,20 +227,23 @@ export default {
 }
 .left {
   background-color: #9e1b32;
-  width: 40%;
-  padding-left: 15%
+  width: 50%;
+}
+.left-padding {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 .right {
-  width: 60%;
+  width: 50%;
   margin-top: 40px;
   margin-right: 64px;
   margin-left: 40px;
 }
 .header {
   justify-content: space-between;
-  margin-top: 40px;
-  margin-left: 40px;
-  margin-right: 32px;
+  margin: 5%;
 }
 .footer {
   margin-left: 15%;
@@ -274,12 +273,14 @@ export default {
   font-family: "Avenir Next";
   font-size: 18px;
 }
-div.leftContentItems {
+ul.leftContentItems > li{
   color: white;
   font-weight: bold;
   font-size: 36px;
   font-weight: 600;
   font-family: "Avenir Next";
+  white-space: nowrap;
+  margin-bottom: 0.8rem;
 }
 div.rightContentItems > div > h4 {
   color: #9e1b32;
@@ -287,7 +288,7 @@ div.rightContentItems > div > h4 {
   font-weight: 18px;
   white-space: nowrap;
 }
-div.rightContentItems > div > ul > li {
+div.rightContentItems > div {
   color: #707070;
   font-family: "Avenir Next";
   font-size: 16px;
