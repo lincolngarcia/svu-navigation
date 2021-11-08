@@ -13,27 +13,52 @@
 
         DO LEFT NAV REWRITE;
   -->
-  <div id="nav" class="flex">
-    <div id="nav.left" class="left">
-      <div id="nav.content.header" class="flex header">
+  <div id="nav" class="nav flex">
+    <!-- <div id="nav.header" class="flex header">
+      <div id="nav.header.left" class='flex' style='width:45%; justify-content: space-between;'>
         <img
           src="~/assets/png/Southern Virginia Logo.png"
           class="mainLogo relative"
         />
-        <a class="standardText contactUs" href=""
-          >Contact Us
-          <img class="ContactUsImage" src="~/assets/png/Arrow+Circle.png"
-        /></a>
+        <div id="nav.content.header.contactUs" class="flex topAlign">
+          <a class="standardText contactUs" href=""
+            >Contact Us
+            <img class="ContactUsImage" src="~/assets/png/Arrow+Circle.png"
+          /></a>
+        </div>
+      </div>
+      <img
+        @click="navClose"
+        id="closeButton"
+        class="closeButton"
+        src="~/assets/png/Close Menu icon -- red.png"
+      />
+    </div> -->
+    <div id="nav.left" class="left">
+      <div id="nav.left.header" class='flex leftheader'>
+        <img
+          src="~/assets/png/Southern Virginia Logo.png"
+          class="mainLogo relative"
+        />
+        <div id="nav.content.header.contactUs" class="flex topAlign">
+          <a class="standardText contactUs" href=""
+            >Contact Us
+            <img class="ContactUsImage" src="~/assets/png/Arrow+Circle.png"
+          /></a>
+          <a id='nav.content.header.whiteX' class='standardText whiteX'>
+            <img class='whiteX' src="~/assets/png/Close Menu Icon -- white.png">
+          </a>
+        </div>
       </div>
       <div id="nav.left.content" class="left-padding">
         <ul class="leftContentItems">
-          <li>Mission</li>
-          <li>Academics</li>
-          <li>Our Virginia Home</li>
-          <li>LaunchPad Initiative</li>
-          <li>Popular Programs</li>
-          <li>Tuition & Aid</li>
-          <li>Apply</li>
+          <li><a href="">Mission</a></li>
+          <li><a href="">Academics</a></li>
+          <li><a href="">Our Virginia Home</a></li>
+          <li><a href="">LaunchPad Initiative</a></li>
+          <li><a href="">Popular Programs</a></li>
+          <li><a href="">Tuition & Aid</a></li>
+          <li><a href="">Apply</a></li>
         </ul>
         <br />
         <br />
@@ -49,133 +74,137 @@
 
     <!--
       <ol id="nav.left.footer.social_list" class='socialCircles'>
-        <li>
+        <li><a href=''>
           <a href="https://www.instagram.com/svuedu/" data-toggle="tooltip" title="" data-original-title="Instagram">
               <img src="/wp-content/uploads/instagram.png">
           </a>
-        </li>
-        <li>
+        </a></li>
+        <li><a href=''>
           <a href="https://www.facebook.com/southernvirginia/" data-toggle="tooltip" title="" data-original-title="Facebook">
               <img src="/wp-content/uploads/facebook.png">
           </a>
-        </li>
-        <li>
+        </a></li>
+        <li><a href=''>
           <a href="https://www.youtube.com/user/SouthernVirginiaUniv/" data-toggle="tooltip" title="" data-original-title="YouTube">
               <img src="/wp-content/uploads/youtube.png">
           </a>
-        </li>
-        <li>
+        </a></li>
+        <li><a href=''>
           <a href="https://twitter.com/SVUedu/" data-toggle="tooltip" title="" data-original-title="Twitter">
               <img src="/wp-content/uploads/twitter.png">
           </a>
-        </li>
-        <li>
+        </a></li>
+        <li><a href=''>
           <a href="https://www.linkedin.com/school/southern-virginia-university/" data-toggle="tooltip" title="" data-original-title="LinkedIn">
               <img src="/wp-content/uploads/linkedin.png">
           </a>
-        </li>
+        </a></li>
       </ol>
 -->
     <div id="nav.right" class="relative right">
-      <img
+      <div id="nav.right.header" class='flex rightheader' >
+        <img
         @click="navClose"
         id="closeButton"
         class="closeButton"
-        src="~/assets/png/Close Menu icon.png"
+        src="~/assets/png/Close Menu icon -- red.png"
       />
+      </div>
       <div id="nav.right.content" class="relative wrap rightContentItems">
         <div id="nav.right.content.academics">
           <h4>Academics</h4>
           <ul>
-            <li>Our Faculty</li>
-            <li>Our Learning Model</li>
-            <li>Programs & Degrees</li>
-            <li>Honors Program</li>
-            <li>Catalog</li>
+            <li><a href="">Our Faculty</a></li>
+            <li><a href="">Our Learning Model</a></li>
+            <li><a href="">Programs & Degrees</a></li>
+            <li><a href="">Honors Program</a></li>
+            <li><a href="">Catalog</a></li>
           </ul>
         </div>
         <div id="nav.right.content.church_&_faith">
           <h4>Church & Faith</h4>
           <ul>
-            <li>Church Alignment</li>
-            <li>YSA Stake & Wards</li>
-            <li>Institute of Religion</li>
-            <li>Missionaries</li>
+            <li><a href="">Church Alignment</a></li>
+            <li><a href="">YSA Stake & Wards</a></li>
+            <li><a href="">Institute of Religion</a></li>
+            <li><a href="">Missionaries</a></li>
           </ul>
         </div>
         <div id="nav.right.content.giving">
           <h4>Giving</h4>
           <ul>
-            <li>Make a Donation</li>
-            <li>Why Give?</li>
-            <li>Ways to Give</li>
-            <li>Capital Projects</li>
+            <li><a href="">Make a Donation</a></li>
+            <li><a href="">Why Give?</a></li>
+            <li><a href="">Ways to Give</a></li>
+            <li><a href="">Capital Projects</a></li>
           </ul>
         </div>
         <div id="nav.right.content.admissions">
           <h4>Admissions</h4>
           <ul>
-            <li>Apply Now</li>
-            <li>Admissions Team</li>
-            <li>How to Apply</li>
-            <li>How to Enroll</li>
-            <li>Visit Campus</li>
+            <li><a href="">Apply Now</a></li>
+            <li><a href="">Admissions Team</a></li>
+            <li><a href="">How to Apply</a></li>
+            <li><a href="">How to Enroll</a></li>
+            <li><a href="">Visit Campus</a></li>
           </ul>
         </div>
         <div id="nav.right.content.campus_life">
           <h4>Campus Life</h4>
           <ul>
-            <li>Our Campus</li>
-            <li>Code of Conduct</li>
-            <li>Student Services</li>
-            <li>Food Services</li>
-            <li>University Housing</li>
-            <li>Explore Virginia</li>
+            <li><a href="">Our Campus</a></li>
+            <li><a href="">Code of Conduct</a></li>
+            <li><a href="">Student Services</a></li>
+            <li><a href="">Food Services</a></li>
+            <li><a href="">University Housing</a></li>
+            <li><a href="">Explore Virginia</a></li>
           </ul>
         </div>
         <div id="nav.right.content.shop">
           <h4>Shop</h4>
           <ul>
-            <li>Shop Athletics Gear</li>
-            <li>Online Bookstore</li>
-            <li>Online Giftshop</li>
-            <li>Photo Store</li>
+            <li><a href="">Shop Athletics Gear</a></li>
+            <li><a href="">Online Bookstore</a></li>
+            <li><a href="">Online Giftshop</a></li>
+            <li><a href="">Photo Store</a></li>
           </ul>
         </div>
         <div id="nav.right.content.tuition_&_aid">
           <h4>Tuition & Aid</h4>
           <ul>
-            <li>Financial Aid Team</li>
-            <li>Scholarships & Aid</li>
-            <li>Tution & Payments</li>
-            <li>About the FAFSA</li>
+            <li><a href="">Financial Aid Team</a></li>
+            <li><a href="">Scholarships & Aid</a></li>
+            <li><a href="">Tution & Payments</a></li>
+            <li><a href="">About the FAFSA</a></li>
           </ul>
         </div>
         <div id="nav.right.content.popular_programs">
           <h4>Popular Programs</h4>
           <ul>
-            <li>Art + Design</li>
-            <li>Athletics</li>
-            <li>Esports</li>
-            <li>Music</li>
-            <li>Marching Band</li>
-            <li>Student Leadership</li>
-            <li>Theatre</li>
-            <li>Pre-Law</li>
-            <li>Pre-Med</li>
+            <li><a href="">Art + Design</a></li>
+            <li><a href="">Athletics</a></li>
+            <li><a href="">Esports</a></li>
+            <li><a href="">Music</a></li>
+            <li><a href="">Marching Band</a></li>
+            <li><a href="">Student Leadership</a></li>
+            <li><a href="">Theatre</a></li>
+            <li><a href="">Pre-Law</a></li>
+            <li><a href="">Pre-Med</a></li>
           </ul>
         </div>
         <div id="nav.right.content.tools">
           <h4>Tools</h4>
           <ul>
-            <li>Alumni</li>
-            <li>Canvas</li>
-            <li>Calendars</li>
-            <li>Catalog</li>
-            <li>Directory</li>
-            <li>Employment</li>
-            <li>Knight App</li>
-            <li>my<strong>svu</strong></li>
+            <li><a href="">Alumni</a></li>
+            <li><a href="">Canvas</a></li>
+            <li><a href="">Calendars</a></li>
+            <li><a href="">Catalog</a></li>
+            <li><a href="">Directory</a></li>
+            <li><a href="">Employment</a></li>
+            <li><a href="">Knight App</a></li>
+            <li>
+              <a href="">my<strong>svu</strong></a>
+            </li>
           </ul>
         </div>
       </div>
@@ -186,30 +215,7 @@
 <script>
 export default {
   methods: {
-    navClose() {
-      let id = null;
-      console.log("command 1: id is (null) =" + id);
-      const nav = document.getElementById("nav");
-      console.log("command 2: nav is called:" + nav);
-      var width = 100;
-      console.log("command 3: width is (100) =" + width);
-      clearInterval(id);
-      id = setInterval(frame(), 10);
-      console.log("command 4: id is now an interval =" + id);
-      function frame() {
-        console.log("frame has been called");
-        if (id == 0) {
-          console.log("id is 0: clearing interval");
-          clearInterval(id);
-          console.log(id);
-        } else {
-          console.log("id is not 0");
-          width = width - 1;
-          console.log("width is: " + width);
-          nav.style.maxWidth = width + "%";
-        }
-      }
-    }
+    return: null
   }
 };
 </script>
@@ -217,6 +223,9 @@ export default {
 <style scoped>
 .flex {
   display: flex;
+}
+.flex-end {
+  justify-content: flex-end;
 }
 .relative {
   position: relative;
@@ -227,27 +236,31 @@ export default {
 }
 .left {
   background-color: #9e1b32;
-  width: 50%;
+  min-width: 50%;
 }
 .left-padding {
   padding-left: 20%;
   padding-right: 20%;
-  padding-top: 5%;
+  padding-top: 25%;
   padding-bottom: 5%;
 }
 .right {
   width: 50%;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-right: 64px;
   margin-left: 40px;
 }
-.header {
+.leftheader {
+  width: 50%;
+  position: absolute;
   justify-content: space-between;
-  margin: 5%;
+  padding: 5%;
 }
-.footer {
-  margin-left: 15%;
-  margin-top: 5%;
+.rightheader {
+  width: 100%;
+  padding-top: 5%;
+  justify-content: flex-end;
+  min-height: 4rem;
 }
 .mainLogo {
   max-width: 133px;
@@ -257,6 +270,14 @@ export default {
 .contactUs {
   display: flex;
   align-items: center;
+  white-space: nowrap;
+}
+.whiteX {
+  display: none;
+}
+.topAlign {
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .ContactUsImage {
   margin-left: 0.5rem;
@@ -273,7 +294,7 @@ export default {
   font-family: "Avenir Next";
   font-size: 18px;
 }
-ul.leftContentItems > li{
+ul.leftContentItems > li {
   color: white;
   font-weight: bold;
   font-size: 36px;
@@ -301,6 +322,28 @@ div.socialCircles {
   background-color: #fff;
   height: 18px;
   width: 18px;
-  opacity: 0.7;
+}
+@media screen and (max-width: 600px) {
+  div.nav {
+    display: block;
+  }
+  div.right {
+    width: 100%;
+  }
+  div.left {
+    width: 100%;
+  }
+  .leftheader {
+    width:100%;
+  }
+  .rightheader {
+    display: none;
+  }
+  .contactUs {
+    display: none;
+  }
+  .whiteX {
+    display: block;
+  }
 }
 </style>
