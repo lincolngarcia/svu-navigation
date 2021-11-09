@@ -1,41 +1,14 @@
 <template>
   <!--
         NOTES::
-        1. ADD EVENT LISTENER PREVENTS PAGE FROM LOADING
         2. SCRIPT NOT TESTED
         3. LINKS CANNOT BE ADDED UNTIL LINKS ARE GIVEN
-        4. DIV WILL NOT TAKE UP FULL SCREEN
         5. SOCIAL MEDIA ICONS NEED TO BE UPDATED WITH NEW THEME
         6. WRAPPING DIV NEEDS TO WRAP ON ANYMORE THAN 3 ELEMENTS
-
-        8. OPENING THE NAV SCRIPT DOES NOT EXIST
-
-
-        DO LEFT NAV REWRITE;
   -->
   <div id="nav" class="nav flex">
-    <!-- <div id="nav.header" class="flex header">
-      <div id="nav.header.left" class='flex' style='width:45%; justify-content: space-between;'>
-        <img
-          src="~/assets/png/Southern Virginia Logo.png"
-          class="mainLogo relative"
-        />
-        <div id="nav.content.header.contactUs" class="flex topAlign">
-          <a class="standardText contactUs" href=""
-            >Contact Us
-            <img class="ContactUsImage" src="~/assets/png/Arrow+Circle.png"
-          /></a>
-        </div>
-      </div>
-      <img
-        @click="navClose"
-        id="closeButton"
-        class="closeButton"
-        src="~/assets/png/Close Menu icon -- red.png"
-      />
-    </div> -->
     <div id="nav.left" class="left">
-      <div id="nav.left.header" class='flex leftheader'>
+      <div id="nav.left.header" class="flex leftheader">
         <img
           src="~/assets/png/Southern Virginia Logo.png"
           class="mainLogo relative"
@@ -45,8 +18,11 @@
             >Contact Us
             <img class="ContactUsImage" src="~/assets/png/Arrow+Circle.png"
           /></a>
-          <a id='nav.content.header.whiteX' class='standardText whiteX'>
-            <img class='whiteX' src="~/assets/png/Close Menu Icon -- white.png">
+          <a id="nav.content.header.whiteX" class="standardText whiteX">
+            <img
+              class="whiteX"
+              src="~/assets/png/Close Menu Icon -- white.png"
+            />
           </a>
         </div>
       </div>
@@ -69,9 +45,17 @@
         <br />
         <p class="standardText">News</p>
         <p class="standardText">Calendar & Events</p>
+        <br />
+        <div id="nav.left.footer" class="bottomArrow">
+          <div id="nav.left.footer.left" class="">
+            <img src="~/assets/png/line.png" style="right: -1px; transform: scaleX(-1);" />
+          </div>
+          <div id="nav.left.footer.right" class="">
+            <img src="~/assets/png/line.png" style="left: -1px;" />
+          </div>
+        </div>
       </div>
     </div>
-
     <!--
       <ol id="nav.left.footer.social_list" class='socialCircles'>
         <li><a href=''>
@@ -102,13 +86,13 @@
       </ol>
 -->
     <div id="nav.right" class="relative right">
-      <div id="nav.right.header" class='flex rightheader' >
+      <div id="nav.right.header" class="flex rightheader">
         <img
-        @click="navClose"
-        id="closeButton"
-        class="closeButton"
-        src="~/assets/png/Close Menu icon -- red.png"
-      />
+          @click="navClose"
+          id="closeButton"
+          class="closeButton"
+          src="~/assets/png/Close Menu icon -- red.png"
+        />
       </div>
       <div id="nav.right.content" class="relative wrap rightContentItems">
         <div id="nav.right.content.academics">
@@ -224,6 +208,15 @@ export default {
 .flex {
   display: flex;
 }
+.bottomArrow {
+  width: 100%;
+  display: none;
+  justify-content: center;
+}
+div.bottomArrow > div > img {
+  max-height: 40px;
+  position: relative;
+}
 .flex-end {
   justify-content: flex-end;
 }
@@ -334,7 +327,7 @@ div.socialCircles {
     width: 100%;
   }
   .leftheader {
-    width:100%;
+    width: 100%;
   }
   .rightheader {
     display: none;
@@ -344,6 +337,9 @@ div.socialCircles {
   }
   .whiteX {
     display: block;
+  }
+  .bottomArrow {
+    display: flex;
   }
 }
 </style>
