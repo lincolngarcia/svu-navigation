@@ -10,19 +10,16 @@
     <div id="nav.left" class="left">
       <div id="nav.left.header" class="flex leftheader">
         <img
-          src="~/assets/png/Southern Virginia Logo.png"
+          src="~/assets/svg/Southern Virginia Logo.svg"
           class="mainLogo relative"
         />
         <div id="nav.content.header.contactUs" class="flex topAlign">
           <a class="standardText contactUs" href=""
             >Contact Us
-            <img class="ContactUsImage" src="~/assets/png/Arrow+Circle.png"
+            <img class="ContactUsImage" src="~/assets/svg/Arrow+Circle.svg"
           /></a>
           <a id="nav.content.header.whiteX" class="standardText whiteX">
-            <img
-              class="whiteX"
-              src="~/assets/png/Close Menu Icon -- white.png"
-            />
+            <img class="whiteX" src="~/assets/svg/Close Menu Icon White.svg" />
           </a>
         </div>
       </div>
@@ -39,7 +36,7 @@
         <br />
         <br />
         <div id="nav.content.bottomRow" class="flex">
-          <img src="~/assets/png/Social Media Icons.png" />
+          <img src="~/assets/svg/Social Media Icons.svg" />
           <!-- insert updated social media icons here -->
         </div>
         <br />
@@ -47,12 +44,7 @@
         <p class="standardText">Calendar & Events</p>
         <br />
         <div id="nav.left.footer" class="bottomArrow">
-          <div id="nav.left.footer.left" class="">
-            <img src="~/assets/png/line.png" style="right: -1px; transform: scaleX(-1);" />
-          </div>
-          <div id="nav.left.footer.right" class="">
-            <img src="~/assets/png/line.png" style="left: -1px;" />
-          </div>
+          <img src="~/assets/svg/arrow-down.svg" />
         </div>
       </div>
     </div>
@@ -91,7 +83,7 @@
           @click="navClose"
           id="closeButton"
           class="closeButton"
-          src="~/assets/png/Close Menu icon -- red.png"
+          src="~/assets/svg/Close Menu icon Red.svg"
         />
       </div>
       <div id="nav.right.content" class="relative wrap rightContentItems">
@@ -296,6 +288,11 @@ ul.leftContentItems > li {
   white-space: nowrap;
   margin-bottom: 0.8rem;
 }
+.rightContentItems {
+  max-width: 799px;
+  align-items: center;
+  justify-content: center;
+}
 div.rightContentItems > div > h4 {
   color: #9e1b32;
   font-family: "Avenir Next";
@@ -307,6 +304,7 @@ div.rightContentItems > div {
   font-family: "Avenir Next";
   font-size: 16px;
   white-space: nowrap;
+  min-width: 200px;
 }
 div.rightContentItems > div {
   padding: 16px;
@@ -316,12 +314,13 @@ div.socialCircles {
   height: 18px;
   width: 18px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   div.nav {
     display: block;
   }
   div.right {
-    width: 100%;
+    width: 70%;
+    margin: auto;
   }
   div.left {
     width: 100%;
