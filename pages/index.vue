@@ -1,55 +1,58 @@
 <template>
   <!--
         NOTES::
+        1. Triple Columns appear t 1408px, and at 417px, white space start to show
         2. SCRIPT NOT TESTED
         3. LINKS CANNOT BE ADDED UNTIL LINKS ARE GIVEN
         5. SOCIAL MEDIA ICONS NEED TO BE UPDATED WITH NEW THEME
-        6. WRAPPING DIV NEEDS TO WRAP ON ANYMORE THAN 3 ELEMENTS
   -->
   <div id="nav.encapsulation" style="max-width: 1600px; margin: 0 auto;">
-  <div id="nav" class="nav flex">
-    <div id="nav.left" class="left">
-      <div id="nav.left.header" class="flex leftheader">
-        <img
-          src="~/assets/svg/Southern Virginia Logo.svg"
-          class="mainLogo relative"
-        />
-        <div id="nav.content.header.contactUs" class="flex topAlign">
-          <a class="standardText contactUs" href=""
-            >Contact Us
-            <img class="ContactUsImage" src="~/assets/svg/Arrow+Circle.svg"
-          /></a>
-          <a id="nav.content.header.whiteX" class="standardText whiteX">
-            <img class="whiteX" src="~/assets/svg/Close Menu Icon White.svg" />
-          </a>
+    <div id="nav" class="nav flex">
+      <div id="nav.left" class="left">
+        <div id="nav.left.header" class="flex leftheader">
+          <img
+            src="~/assets/svg/Southern Virginia Logo.svg"
+            class="mainLogo relative"
+          />
+          <div id="nav.content.header.contactUs" class="flex topAlign">
+            <a class="standardText contactUs" href=""
+              >Contact Us
+              <img class="ContactUsImage" src="~/assets/svg/Arrow+Circle.svg"
+            /></a>
+            <a id="nav.content.header.whiteX" class="standardText whiteX">
+              <img
+                class="whiteX"
+                src="~/assets/svg/Close Menu Icon White.svg"
+              />
+            </a>
+          </div>
+        </div>
+        <div id="nav.left.content" class="left-padding">
+          <ul class="leftContentItems">
+            <li><a href="">Mission</a></li>
+            <li><a href="">Academics</a></li>
+            <li><a href="">Our Virginia Home</a></li>
+            <li><a href="">LaunchPad Initiative</a></li>
+            <li><a href="">Popular Programs</a></li>
+            <li><a href="">Tuition & Aid</a></li>
+            <li><a href="">Apply</a></li>
+          </ul>
+          <br />
+          <br />
+          <div id="nav.content.bottomRow" class="flex">
+            <img src="~/assets/svg/Social Media Icons.svg" />
+            <!-- insert updated social media icons here -->
+          </div>
+          <br />
+          <p class="standardText">News</p>
+          <p class="standardText">Calendar & Events</p>
+          <br />
+          <div id="nav.left.footer" class="bottomArrow">
+            <img src="~/assets/svg/arrow-down.svg" />
+          </div>
         </div>
       </div>
-      <div id="nav.left.content" class="left-padding">
-        <ul class="leftContentItems">
-          <li><a href="">Mission</a></li>
-          <li><a href="">Academics</a></li>
-          <li><a href="">Our Virginia Home</a></li>
-          <li><a href="">LaunchPad Initiative</a></li>
-          <li><a href="">Popular Programs</a></li>
-          <li><a href="">Tuition & Aid</a></li>
-          <li><a href="">Apply</a></li>
-        </ul>
-        <br />
-        <br />
-        <div id="nav.content.bottomRow" class="flex">
-          <img src="~/assets/svg/Social Media Icons.svg" />
-          <!-- insert updated social media icons here -->
-        </div>
-        <br />
-        <p class="standardText">News</p>
-        <p class="standardText">Calendar & Events</p>
-        <br />
-        <div id="nav.left.footer" class="bottomArrow">
-          <img src="~/assets/svg/arrow-down.svg" />
-        </div>
-      </div>
-    </div>
-    <!--
+      <!--
       <ol id="nav.left.footer.social_list" class='socialCircles'>
         <li><a href=''>
           <a href="https://www.instagram.com/svuedu/" data-toggle="tooltip" title="" data-original-title="Instagram">
@@ -78,7 +81,7 @@
         </a></li>
       </ol>
 -->
-    <div id="nav.right" class="relative right">
+      <div id="nav.right" class="relative right">
         <div id="nav.right.header" class="flex rightheader">
           <img
             @click="navClose"
@@ -186,7 +189,8 @@
           </div>
         </div>
       </div>
-      </div>
+    </div>
+    <div id="left.background" style='z-index: -1;' class="leftBackground"></div>
   </div>
 </template>
 
@@ -236,14 +240,11 @@ div.bottomArrow > div > img {
   flex-wrap: wrap;
 }
 .left {
-  background-color: #9e1b32;
   min-width: 50%;
+  background-color: #9e1b32;
 }
 .left-padding {
-  padding-left: 20%;
-  padding-right: 20%;
-  padding-top: 25%;
-  padding-bottom: 5%;
+  padding: 5% 20%;
 }
 .right {
   width: 50%;
@@ -252,10 +253,16 @@ div.bottomArrow > div > img {
   margin-left: 40px;
 }
 .leftheader {
-  width: 50%;
-  position: absolute;
   justify-content: space-between;
-  padding: 5%;
+  padding: 10% 5% 5% 5%;
+}
+.leftBackground {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background-color: #9e1b32;
+  top: 0;
+  left: 0;
 }
 .rightheader {
   width: 100%;
@@ -295,6 +302,7 @@ div.bottomArrow > div > img {
   font-weight: 600;
   font-family: "Avenir Next";
   font-size: 18px;
+  margin-bottom: 10%
 }
 
 ul.leftContentItems > li {
@@ -310,7 +318,7 @@ ul.leftContentItems > li > a {
 }
 .rightContentItems {
   max-width: 799px;
-  align-items: center;
+  align-items: start;
   justify-content: center;
 }
 div.rightContentItems > div > h4 {
@@ -320,10 +328,7 @@ div.rightContentItems > div > h4 {
   font-weight: 400;
   white-space: nowrap;
 }
-div.rightContentItems > div > ul > li > a {
-  color: #aaaaaa;
-}
-div.rightContentItems > div {
+div.rightContentItems > div, div.rightContentItems > div > ul > li > a{
   color: #707070;
   font-family: "Avenir Next";
   font-size: 16px;
@@ -347,9 +352,11 @@ div.socialCircles {
     width: 70%;
     margin: auto;
   }
-  div.left,
-  .leftheader {
+  div.left , .leftheader {
     width: 100%;
+  }
+  .leftBackground {
+    display: none;
   }
   .rightheader,
   .contactUs {
