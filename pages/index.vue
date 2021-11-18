@@ -248,9 +248,6 @@ div.bottomArrow > div > img {
 }
 .right {
   width: 50%;
-  margin-top: 30px;
-  margin-right: 64px;
-  margin-left: 40px;
 }
 .leftheader {
   justify-content: space-between;
@@ -266,7 +263,7 @@ div.bottomArrow > div > img {
 }
 .rightheader {
   width: 100%;
-  padding-top: 5%;
+  padding: 10% 5% 5% 5%;
   justify-content: flex-end;
   min-height: 4rem;
   max-width: 799px;
@@ -365,6 +362,11 @@ div.socialCircles {
   .whiteX,
   .bottomArrow {
     display: flex;
+  }
+}
+@media screen and (max-width: 450px) {
+  .left-padding {
+    padding: 5% 10%;
   }
 }
 </style>
