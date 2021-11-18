@@ -91,7 +91,7 @@
           />
         </div>
         <div id="nav.right.content" class="relative wrap rightContentItems">
-          <div id="nav.right.content.academics">
+          <div id="academics">
             <h4>Academics</h4>
             <ul>
               <li><a href="">Our Faculty</a></li>
@@ -101,7 +101,7 @@
               <li><a href="">Catalog</a></li>
             </ul>
           </div>
-          <div id="nav.right.content.church_&_faith">
+          <div id="church_faith">
             <h4>Church & Faith</h4>
             <ul>
               <li><a href="">Church Alignment</a></li>
@@ -110,7 +110,7 @@
               <li><a href="">Missionaries</a></li>
             </ul>
           </div>
-          <div id="nav.right.content.giving">
+          <div id="giving">
             <h4>Giving</h4>
             <ul>
               <li><a href="">Make a Donation</a></li>
@@ -119,7 +119,7 @@
               <li><a href="">Capital Projects</a></li>
             </ul>
           </div>
-          <div id="nav.right.content.admissions">
+          <div id="admissions">
             <h4>Admissions</h4>
             <ul>
               <li><a href="">Apply Now</a></li>
@@ -129,7 +129,7 @@
               <li><a href="">Visit Campus</a></li>
             </ul>
           </div>
-          <div id="nav.right.content.campus_life">
+          <div id="campus_life">
             <h4>Campus Life</h4>
             <ul>
               <li><a href="">Our Campus</a></li>
@@ -140,7 +140,7 @@
               <li><a href="">Explore Virginia</a></li>
             </ul>
           </div>
-          <div id="nav.right.content.shop">
+          <div id="shop">
             <h4>Shop</h4>
             <ul>
               <li><a href="">Shop Athletics Gear</a></li>
@@ -149,7 +149,7 @@
               <li><a href="">Photo Store</a></li>
             </ul>
           </div>
-          <div id="nav.right.content.tuition_&_aid">
+          <div id="tuition_aid">
             <h4>Tuition & Aid</h4>
             <ul>
               <li><a href="">Financial Aid Team</a></li>
@@ -158,7 +158,7 @@
               <li><a href="">About the FAFSA</a></li>
             </ul>
           </div>
-          <div id="nav.right.content.popular_programs">
+          <div id="popular_programs">
             <h4>Popular Programs</h4>
             <ul>
               <li><a href="">Art + Design</a></li>
@@ -172,7 +172,7 @@
               <li><a href="">Pre-Med</a></li>
             </ul>
           </div>
-          <div id="nav.right.content.tools">
+          <div id="tools">
             <h4>Tools</h4>
             <ul>
               <li><a href="">Alumni</a></li>
@@ -190,7 +190,7 @@
         </div>
       </div>
     </div>
-    <div id="left.background" style='z-index: -1;' class="leftBackground"></div>
+    <div id="left.background" style="z-index: -1;" class="leftBackground"></div>
   </div>
 </template>
 
@@ -216,6 +216,9 @@ li {
 }
 a {
   text-decoration: none;
+}
+.nav {
+  width: 100%;
 }
 .flex {
   display: flex;
@@ -299,7 +302,7 @@ div.bottomArrow > div > img {
   font-weight: 600;
   font-family: "Avenir Next";
   font-size: 18px;
-  margin-bottom: 10%
+  margin-bottom: 10%;
 }
 
 ul.leftContentItems > li {
@@ -314,9 +317,10 @@ ul.leftContentItems > li > a {
   font-weight: 600;
 }
 .rightContentItems {
-  max-width: 799px;
-  align-items: start;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: .3333fr .3333fr .3333fr;
+  gap: 20px 44px;
+  padding: 10% 5% 5% 5%;
 }
 div.rightContentItems > div > h4 {
   color: #9e1b32;
@@ -325,31 +329,34 @@ div.rightContentItems > div > h4 {
   font-weight: 400;
   white-space: nowrap;
 }
-div.rightContentItems > div, div.rightContentItems > div > ul > li > a{
+div.rightContentItems > div,
+div.rightContentItems > div > ul > li > a {
   color: #707070;
   font-family: "Avenir Next";
   font-size: 16px;
   white-space: nowrap;
-  min-width: 200px;
   align-items: start;
 }
-div.rightContentItems > div {
+
+/* div.rightContentItems > div {
   padding: 16px;
-}
+} */
+
 div.socialCircles {
   background-color: #fff;
   height: 18px;
   width: 18px;
 }
+
 @media screen and (max-width: 900px) {
   div.nav {
     display: block;
   }
   div.right {
-    width: 70%;
-    margin: auto;
+    width: 100%;
   }
-  div.left , .leftheader {
+  div.left,
+  .leftheader {
     width: 100%;
   }
   .leftBackground {
@@ -363,8 +370,60 @@ div.socialCircles {
   .bottomArrow {
     display: flex;
   }
+
+  ul.leftContentItems > li > a {
+    font-size: 32px;
+  }
 }
 @media screen and (max-width: 450px) {
+  #academics {
+    order: 1;
+  }
+
+  #campus_life {
+    order: 2;
+  }
+
+  #admissions {
+    order: 3;
+  }
+
+  #tuition_aid {
+    order: 4;
+  }
+
+  #magnets {
+    order: 5;
+  }
+
+  #church_faith {
+    order: 6;
+  }
+
+  #giving {
+    order: 7;
+  }
+
+  #tools {
+    order: 8;
+  }
+
+  #shop {
+    order: 10;
+  }
+
+  .rightContentItems {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    gap: 28px 16px;
+    padding: 78px 28px 28px 28px;
+  }
+
+  div.rightContentItems > div,
+  div.rightContentItems > div > ul > li > a {
+    min-width: 0;
+  }
+
   .left-padding {
     padding: 5% 10%;
   }
