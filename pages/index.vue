@@ -94,94 +94,94 @@
           <div id="academics">
             <h4>Academics</h4>
             <ul>
-              <li><a href="">Our Faculty</a></li>
-              <li><a href="">Our Learning Model</a></li>
-              <li><a href="">Programs & Degrees</a></li>
-              <li><a href="">Honors Program</a></li>
-              <li><a href="">Catalog</a></li>
+              <li><a href="https://svu.edu/faculty/">Our Faculty</a></li>
+              <li><a href="">Our Learning Model *</a></li>
+              <li><a href="https://svu.edu/academics/#programs">Programs & Degrees</a></li>
+              <li><a href="https://svu.edu/academics/honors-program/">Honors Program</a></li>
+              <li><a href="https://catalog.svu.edu">Catalog</a></li>
             </ul>
           </div>
           <div id="church_faith">
             <h4>Church & Faith</h4>
             <ul>
-              <li><a href="">Church Alignment</a></li>
-              <li><a href="">YSA Stake & Wards</a></li>
-              <li><a href="">Institute of Religion</a></li>
-              <li><a href="">Missionaries</a></li>
+              <li><a href="">Church Alignment *</a></li>
+              <li><a href="https://svu.edu/campus-life/ysa-wards/">YSA Stake & Wards</a></li>
+              <li><a href="https://www.southernvirginiainstitute.com/">Institute of Religion</a></li>
+              <li><a href="https://svu.edu/campus-life/missionaries/">Missionaries</a></li>
             </ul>
           </div>
           <div id="giving">
             <h4>Giving</h4>
             <ul>
-              <li><a href="">Make a Donation</a></li>
-              <li><a href="">Why Give?</a></li>
-              <li><a href="">Ways to Give</a></li>
-              <li><a href="">Capital Projects</a></li>
+              <li><a href="https://secure.svu.edu/donate/">Make a Donation</a></li>
+              <li><a href="">Why Give? *</a></li>
+              <li><a href="https://svu.edu/giving/#priorities">Ways to Give</a></li>
+              <li><a href="">Capital Projects *</a></li>
             </ul>
           </div>
           <div id="admissions">
             <h4>Admissions</h4>
             <ul>
-              <li><a href="">Apply Now</a></li>
-              <li><a href="">Admissions Team</a></li>
-              <li><a href="">How to Apply</a></li>
-              <li><a href="">How to Enroll</a></li>
-              <li><a href="">Visit Campus</a></li>
+              <li><a href="https://svu.edu/application/">Apply Now</a></li>
+              <li><a href="">Admissions Team *</a></li>
+              <li><a href="https://svu.edu/admissions/#apply">How to Apply</a></li>
+              <li><a href="https://svu.edu/admissions/enrollment/">How to Enroll</a></li>
+              <li><a href="https://svu.edu/admissions/visit/">Visit Campus</a></li>
             </ul>
           </div>
           <div id="campus_life">
             <h4>Campus Life</h4>
             <ul>
-              <li><a href="">Our Campus</a></li>
-              <li><a href="">Code of Conduct</a></li>
-              <li><a href="">Student Services</a></li>
-              <li><a href="">Food Services</a></li>
-              <li><a href="">University Housing</a></li>
-              <li><a href="">Explore Virginia</a></li>
+              <li><a href="">Our Campus *</a></li>
+              <li><a href="https://svu.edu/campus-life/code-of-honor/">Code of Conduct</a></li>
+              <li><a href="https://svu.edu/campus-life/student-success/">Student Services</a></li>
+              <li><a href="https://svu.edu/campus-life/dining/">Food Services</a></li>
+              <li><a href="https://svu.edu/campus-life/housing/">University Housing</a></li>
+              <li><a href="https://svu.edu/about/location/">Explore Virginia</a></li>
             </ul>
           </div>
           <div id="shop">
             <h4>Shop</h4>
             <ul>
-              <li><a href="">Shop Athletics Gear</a></li>
-              <li><a href="">Online Bookstore</a></li>
-              <li><a href="">Online Giftshop</a></li>
-              <li><a href="">Photo Store</a></li>
+              <li><a href="">Shop Athletics Gear **</a></li>
+              <li><a href="">Online Bookstore *</a></li>
+              <li><a href="">Online Giftshop *</a></li>
+              <li><a href="">Photo Store **</a></li>
             </ul>
           </div>
           <div id="tuition_aid">
             <h4>Tuition & Aid</h4>
             <ul>
-              <li><a href="">Financial Aid Team</a></li>
-              <li><a href="">Scholarships & Aid</a></li>
-              <li><a href="">Tution & Payments</a></li>
-              <li><a href="">About the FAFSA</a></li>
+              <li><a href="https://svu.edu/admissions/financial-services/">Financial Aid Team</a></li>
+              <li><a href="https://svu.edu/admissions/scholarships-and-aid/">Scholarships & Aid</a></li>
+              <li><a href="https://svu.edu/admissions/tuition-and-payments/">Tution & Payments</a></li>
+              <li><a href="https://svu.edu/admissions/scholarships-and-aid/">About the FAFSA</a></li> <!-- duplicate -->
             </ul>
           </div>
           <div id="popular_programs">
-            <h4>Popular Programs</h4>
+            <h4>Popular Programs</h4> <!-- irregularities in domain names should be addressed in new website -->
             <ul>
-              <li><a href="">Art + Design</a></li>
-              <li><a href="">Athletics</a></li>
-              <li><a href="">Esports</a></li>
-              <li><a href="">Music</a></li>
-              <li><a href="">Marching Band</a></li>
-              <li><a href="">Student Leadership</a></li>
-              <li><a href="">Theatre</a></li>
-              <li><a href="">Pre-Law</a></li>
-              <li><a href="">Pre-Med</a></li>
+              <li><a href="https://art.svu.edu/">Art + Design</a></li>
+              <li><a href="https://svu.edu/campus-life/athletics/">Athletics</a></li> <!-- mulitiple athletics pages -->
+              <li><a href="https://esports.svu.edu/">Esports</a></li>
+              <li><a href="https://music.svu.edu/">Music</a></li>
+              <li><a href="https://svu.edu/campus-life/marching-band/">Marching Band</a></li>
+              <li><a href="">Student Leadership *</a></li>
+              <li><a href="https://svu.edu/campus-life/theatre/">Theatre</a></li>
+              <li><a href="https://svu.edu/academics/programs/pre-law/">Pre-Law</a></li>
+              <li><a href="https://catalog.svu.edu/concentrations/pre-medical/">Pre-Med</a></li> <!-- irregularity from pre law  -->
             </ul>
           </div>
           <div id="tools">
             <h4>Tools</h4>
             <ul>
-              <li><a href="">Alumni</a></li>
-              <li><a href="">Canvas</a></li>
-              <li><a href="">Calendars</a></li>
-              <li><a href="">Catalog</a></li>
-              <li><a href="">Directory</a></li>
-              <li><a href="">Employment</a></li>
-              <li><a href="">Knight App</a></li>
+              <li><a href="https://svu.edu/about/alumni/">Alumni</a></li>
+              <li><a href="https://svu.edu/canvas/">Canvas</a></li>
+              <li><a href="https://calendar.svu.edu/">Calendars</a></li>
+              <li><a href="https://catalog.svu.edu/">Catalog</a></li>
+              <li><a href="https://svu.edu/directory/">Directory</a></li>
+              <li><a href="https://svu.edu/employment/">Employment</a></li>
+              <li><a href="">Knight App *</a></li>
               <li>
                 <a href="">my<strong>svu</strong></a>
               </li>
