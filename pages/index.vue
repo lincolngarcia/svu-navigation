@@ -182,8 +182,7 @@
               <li><a href="https://svu.edu/directory/">Directory</a></li>
               <li><a href="https://svu.edu/employment/">Employment</a></li>
               <li><a href="">Knight App *</a></li>
-              <li>
-                <a href="">my<strong>svu</strong></a>
+              <li><a href="https://my.svu.edu/ics">my<strong>svu</strong></a>
               </li>
             </ul>
           </div>
