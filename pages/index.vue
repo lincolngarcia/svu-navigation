@@ -6,7 +6,7 @@
         3. LINKS CANNOT BE ADDED UNTIL LINKS ARE GIVEN
         5. SOCIAL MEDIA ICONS NEED TO BE UPDATED WITH NEW THEME
   -->
-  <div id="nav.encapsulation" style="max-width: 1600px; margin: 0 auto;">
+  <nav>
     <div id="nav" class="nav flex">
       <div id="nav.left" class="left">
         <div id="nav.left.header" class="flex leftheader">
@@ -34,7 +34,7 @@
             <li><a href="">Our Virginia Home</a></li>
             <li><a href="">LaunchPad Initiative</a></li>
             <li><a href="">Popular Programs</a></li>
-            <li><a href="">Tuition & Aid</a></li>
+            <li><a href="">Tuition &amp;amp; Aid</a></li>
             <li><a href="">Apply</a></li>
           </ul>
           <br />
@@ -45,7 +45,7 @@
           </div>
           <br />
           <p class="standardText">News</p>
-          <p class="standardText">Calendar & Events</p>
+          <p class="standardText">Calendar &amp;amp; Events</p>
           <br />
           <div id="nav.left.footer" class="bottomArrow">
             <img src="~/assets/svg/arrow-down.svg" />
@@ -84,7 +84,7 @@
       <div id="nav.right" class="relative right">
         <div id="nav.right.header" class="flex rightheader">
           <img
-            @click="navClose"
+            @click="closeNav"
             id="closeButton"
             class="closeButton"
             src="~/assets/svg/Close Menu icon Red.svg"
@@ -96,16 +96,16 @@
             <ul>
               <li><a href="">Our Faculty</a></li>
               <li><a href="">Our Learning Model</a></li>
-              <li><a href="">Programs & Degrees</a></li>
+              <li><a href="">Programs &amp;amp; Degrees</a></li>
               <li><a href="">Honors Program</a></li>
               <li><a href="">Catalog</a></li>
             </ul>
           </div>
           <div id="church_faith">
-            <h4>Church & Faith</h4>
+            <h4>Church &amp;amp; Faith</h4>
             <ul>
               <li><a href="">Church Alignment</a></li>
-              <li><a href="">YSA Stake & Wards</a></li>
+              <li><a href="">YSA Stake &amp;amp; Wards</a></li>
               <li><a href="">Institute of Religion</a></li>
               <li><a href="">Missionaries</a></li>
             </ul>
@@ -150,11 +150,11 @@
             </ul>
           </div>
           <div id="tuition_aid">
-            <h4>Tuition & Aid</h4>
+            <h4>Tuition &amp; Aid</h4>
             <ul>
               <li><a href="">Financial Aid Team</a></li>
-              <li><a href="">Scholarships & Aid</a></li>
-              <li><a href="">Tution & Payments</a></li>
+              <li><a href="">Scholarships &amp; Aid</a></li>
+              <li><a href="">Tution &amp; Payments</a></li>
               <li><a href="">About the FAFSA</a></li>
             </ul>
           </div>
@@ -190,17 +190,33 @@
         </div>
       </div>
     </div>
-    <div id="left.background" style="z-index: -1;" class="leftBackground"></div>
-  </div>
+    <div id="left-background" class="bg bg-left"></div>
+    <div id="right-background" class="bg bg-right"></div>
+  </nav>
+
 </template>
 
 <script>
 export default {
   methods: {
-    return: null
+    closeNav() {
+      const nav = document.getElementById("nav");
+
+      const leftBg = document.getElementById("left-background");
+      const rightBg = document.getElementById("right-background");
+
+      nav.style.display = "none";
+
+      leftBg.style.width = 0;
+      rightBg.style.width = 0;
+    },
+    openNav() {
+      
+    }
   }
-};
+}
 </script>
+
 <style>
 *,
 *::before,
@@ -217,6 +233,35 @@ li {
 a {
   text-decoration: none;
 }
+
+nav {
+  max-width: 1600px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.bg {
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+  transition: .3s all ease;
+}
+
+.bg-left {
+  background-color: #9e1b32;
+  top: 0;
+  left: 0;
+  width: 50%;
+  z-index: -1;
+}
+
+.bg-right {
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+}
+
 .nav {
   width: 100%;
 }
@@ -256,14 +301,7 @@ div.bottomArrow > div > img {
   justify-content: space-between;
   padding: 10% 5% 5% 5%;
 }
-.leftBackground {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  background-color: #9e1b32;
-  top: 0;
-  left: 0;
-}
+
 .rightheader {
   width: 100%;
   padding: 10% 5% 5% 5%;
