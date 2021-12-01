@@ -1,6 +1,7 @@
 <template>
   <!--
         NOTES::
+        INCREASE SPACING ON LEFT SIDE OF CARD ICONS ON LARGE DISPLAYS
         1. Triple Columns appear t 1408px, and at 417px, white space start to show
         2. SCRIPT NOT TESTED
         3. LINKS CANNOT BE ADDED UNTIL LINKS ARE GIVEN
@@ -16,7 +17,7 @@
           />
           <div id="nav.content.header.contactUs" class="flex topAlign">
             <a class="standardText contactUs" href=""
-              >Contact Us
+              >Contact Us <!-- add Apply, Visit, Contact Us -->
               <img class="ContactUsImage" src="~/assets/svg/Arrow+Circle.svg"
             /></a>
             <a id="nav.content.header.whiteX" class="standardText whiteX">
@@ -29,13 +30,13 @@
         </div>
         <div id="nav.left.content" class="left-padding">
           <ul class="leftContentItems">
-            <li><a href="">Mission</a></li>
-            <li><a href="">Academics</a></li>
-            <li><a href="">Our Virginia Home</a></li>
-            <li><a href="">LaunchPad Initiative</a></li>
-            <li><a href="">Popular Programs</a></li>
-            <li><a href="">Tuition & Aid</a></li>
-            <li><a href="">Apply</a></li>
+            <li><a href="https://svu.edu/about/">Mission</a></li>
+            <li><a href="https://svu.edu/academics/">Academics</a></li>
+            <li><a href="">Our Virginia Home</a></li> <!-- anchor to Other attractions on locations page, change heading to our virginia home -->
+            <li><a href="https://svu.edu/about/launchpad/">LaunchPad Initiative</a></li>
+            <!--<li><a href="">Popular Programs</a></li>-->
+            <li><a href="https://svu.edu/admissions/tuition-and-payments/">Tuition & Aid</a></li>
+            <li><a href="https://svu.edu/application/">Apply</a></li>
           </ul>
           <br />
           <br />
@@ -92,10 +93,10 @@
         </div>
         <div id="nav.right.content" class="relative wrap rightContentItems">
           <div id="academics">
-            <h4>Academics</h4>
+            <h4>Academics</h4> <!-- create dynmaic loading -->
             <ul>
               <li><a href="https://svu.edu/faculty/">Our Faculty</a></li>
-              <li><a href="">Our Learning Model *</a></li>
+              <li><a href="https://svu.edu/academics/">Our Learning Model</a></li>
               <li><a href="https://svu.edu/academics/#programs">Programs & Degrees</a></li>
               <li><a href="https://svu.edu/academics/honors-program/">Honors Program</a></li>
               <li><a href="https://catalog.svu.edu">Catalog</a></li>
@@ -104,7 +105,7 @@
           <div id="church_faith">
             <h4>Church & Faith</h4>
             <ul>
-              <li><a href="">Church Alignment *</a></li>
+              <!--<li><a href="">Church Alignment *</a></li>-->
               <li><a href="https://svu.edu/campus-life/ysa-wards/">YSA Stake & Wards</a></li>
               <li><a href="https://www.southernvirginiainstitute.com/">Institute of Religion</a></li>
               <li><a href="https://svu.edu/campus-life/missionaries/">Missionaries</a></li>
@@ -116,14 +117,14 @@
               <li><a href="https://secure.svu.edu/donate/">Make a Donation</a></li>
               <li><a href="">Why Give? *</a></li>
               <li><a href="https://svu.edu/giving/#priorities">Ways to Give</a></li>
-              <li><a href="">Capital Projects *</a></li>
+              <!--<li><a href="">Capital Projects *</a></li>-->
             </ul>
           </div>
           <div id="admissions">
             <h4>Admissions</h4>
             <ul>
               <li><a href="https://svu.edu/application/">Apply Now</a></li>
-              <li><a href="">Admissions Team *</a></li>
+              <li><a href="https://svu.edu/admissions/contact/">Admissions Team</a></li>
               <li><a href="https://svu.edu/admissions/#apply">How to Apply</a></li>
               <li><a href="https://svu.edu/admissions/enrollment/">How to Enroll</a></li>
               <li><a href="https://svu.edu/admissions/visit/">Visit Campus</a></li>
@@ -143,10 +144,10 @@
           <div id="shop">
             <h4>Shop</h4>
             <ul>
-              <li><a href="">Shop Athletics Gear **</a></li>
-              <li><a href="">Online Bookstore *</a></li>
-              <li><a href="">Online Giftshop *</a></li>
-              <li><a href="">Photo Store **</a></li>
+              <li><a href="https://gear.svu.edu">Shop Athletics Gear</a></li>
+              <li><a href="https://svu.textbookx.com/institutional/index.php">Online Bookstore</a></li>
+              <li><a href="https://svu.merchorders.com/">Online Giftshop</a></li>
+              <li><a href="https://photos.svu.edu/">Photo Store</a></li>
             </ul>
           </div>
           <div id="tuition_aid">
@@ -166,7 +167,7 @@
               <li><a href="https://esports.svu.edu/">Esports</a></li>
               <li><a href="https://music.svu.edu/">Music</a></li>
               <li><a href="https://svu.edu/campus-life/marching-band/">Marching Band</a></li>
-              <li><a href="">Student Leadership *</a></li>
+              <!--<li><a href="">Student Leadership *</a></li>-->
               <li><a href="https://svu.edu/campus-life/theatre/">Theatre</a></li>
               <li><a href="https://svu.edu/academics/programs/pre-law/">Pre-Law</a></li>
               <li><a href="https://catalog.svu.edu/concentrations/pre-medical/">Pre-Med</a></li> <!-- irregularity from pre law  -->
@@ -181,7 +182,7 @@
               <li><a href="https://catalog.svu.edu/">Catalog</a></li>
               <li><a href="https://svu.edu/directory/">Directory</a></li>
               <li><a href="https://svu.edu/employment/">Employment</a></li>
-              <li><a href="">Knight App *</a></li>
+              <!--<li><a href="">Knight App *</a></li>-->
               <li><a href="https://my.svu.edu/ics">my<strong>svu</strong></a>
               </li>
             </ul>
