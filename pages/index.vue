@@ -239,7 +239,7 @@
           </div>
           <br />
           <p class="standardText">News</p>
-          <p class="standardText">Calendar &amp;amp; Events</p>
+          <p class="standardText">Calendar &amp; Events</p>
           <br />
           <div id="nav.left.footer" class="bottomArrow">
             <img src="~/assets/svg/arrow-down.svg" />
@@ -263,16 +263,16 @@
             <ul>
               <li><a href="">Our Faculty</a></li>
               <li><a href="">Our Learning Model</a></li>
-              <li><a href="">Programs &amp;amp; Degrees</a></li>
+              <li><a href="">Programs &amp; Degrees</a></li>
               <li><a href="">Honors Program</a></li>
               <li><a href="">Catalog</a></li>
             </ul>
           </div>
           <div id="church_faith">
-            <h4>Church &amp;amp; Faith</h4>
+            <h4>Church &amp; Faith</h4>
             <ul>
               <li><a href="">Church Alignment</a></li>
-              <li><a href="">YSA Stake &amp;amp; Wards</a></li>
+              <li><a href="">YSA Stake &amp; Wards</a></li>
               <li><a href="">Institute of Religion</a></li>
               <li><a href="">Missionaries</a></li>
             </ul>
