@@ -1,5 +1,4 @@
 <template>
-
   <nav id="nav.encapsulation" style="max-width: 1600px; margin: 0 auto;">
     <div id="nav" class="nav flex">
       <div id="nav.left" class="left">
@@ -12,7 +11,7 @@
             <div class="flex">
               <a class="standardText topalignChild">Apply</a>
               <a class="standardText topalignChild">Visit</a>
-              <div class='topalignChild'>
+              <div class="topalignChild">
                 <a class="standardText contactUs" href=""
                   >Contact Us
                   <img
@@ -33,7 +32,11 @@
           <ul class="leftContentItems">
             <li><a href="https://svu.edu/about/">Mission</a></li>
             <li><a href="https://svu.edu/academics/">Academics</a></li>
-            <li><a href="https://svu.edu/about/location/#our_virginia_home">Our Virginia Home</a></li>
+            <li>
+              <a href="https://svu.edu/about/location/#our_virginia_home"
+                >Our Virginia Home</a
+              >
+            </li>
             <!-- anchor to Other attractions on locations page, change heading to our virginia home DONE-->
             <li>
               <a href="https://svu.edu/about/launchpad/"
@@ -250,12 +253,41 @@
 
       <div id="nav.right" class="relative right">
         <div id="nav.right.header" class="flex rightheader">
-          <img
-            @click="closeNav"
-            id="closeButton"
-            class="closeButton"
-            src="~/assets/svg/Close Menu icon Red.svg"
-          />
+          <div @click='navClose()' class='cursor-pointer'>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19"
+              height="19"
+              viewBox="0 0 18.828 18.828"
+            >
+              <g
+                id="Close_Menu_Icon"
+                data-name="Close Menu Icon"
+                transform="translate(1.414 1.414)"
+              >
+                <line
+                  id="Line_42"
+                  data-name="Line 42"
+                  y1="16"
+                  x2="16"
+                  fill="none"
+                  stroke="#9e1b32"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                />
+                <line
+                  id="Line_43"
+                  data-name="Line 43"
+                  x1="16"
+                  y1="16"
+                  fill="none"
+                  stroke="#9e1b32"
+                  stroke-linecap="round"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
         <div id="nav.right.content" class="relative wrap rightContentItems">
           <div id="academics">
@@ -435,7 +467,6 @@
     <div id="left-background" class="bg bg-left"></div>
     <div id="right-background" class="bg bg-right"></div>
   </nav>
-
 </template>
 
 <script>
@@ -452,11 +483,9 @@ export default {
       leftBg.style.width = 0;
       rightBg.style.width = 0;
     },
-    openNav() {
-      
-    }
+    openNav() {}
   }
-}
+};
 </script>
 
 <style>
@@ -486,7 +515,7 @@ nav {
   height: 100%;
   position: absolute;
   z-index: -2;
-  transition: .3s all ease;
+  transition: 0.3s all ease;
 }
 
 .bg-left {
@@ -503,7 +532,9 @@ nav {
   width: 100%;
   background-color: white;
 }
-
+.cursor-pointer:hover{
+  cursor: pointer
+}
 .nav {
   width: 100%;
 }
