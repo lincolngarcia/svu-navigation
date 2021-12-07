@@ -1,5 +1,5 @@
 <template>
-  <div id="nav.encapsulation" style="max-width: 1600px; margin: 0 auto;">
+  <nav id="nav.encapsulation" style="max-width: 1600px; margin: 0 auto;">
     <div id="nav" class="nav flex">
       <div id="nav.left" class="left">
         <div id="nav.left.header" class="flex leftheader">
@@ -42,7 +42,7 @@
             <!--<li><a href="">Popular Programs</a></li>-->
             <li>
               <a href="https://svu.edu/admissions/tuition-and-payments/"
-                >Tuition & Aid</a
+                >Tuition &amp; Aid</a
               >
             </li>
             <li><a href="https://svu.edu/application/">Apply</a></li>
@@ -238,10 +238,8 @@
             </ul>
           </div>
           <br />
-          <p class="standardText" style="margin-bottom: 0px; margin-top:8%;">
-            News
-          </p>
-          <p class="standardText">Calendar & Events</p>
+          <p class="standardText">News</p>
+          <p class="standardText">Calendar &amp;amp; Events</p>
           <br />
           <div id="nav.left.footer" class="bottomArrow">
             <img src="~/assets/svg/arrow-down.svg" />
@@ -252,7 +250,7 @@
       <div id="nav.right" class="relative right">
         <div id="nav.right.header" class="flex rightheader">
           <img
-            @click="navClose"
+            @click="closeNav"
             id="closeButton"
             class="closeButton"
             src="~/assets/svg/Close Menu icon Red.svg"
@@ -263,42 +261,20 @@
             <h4>Academics</h4>
             <!-- create dynmaic loading -->
             <ul>
-              <li><a href="https://svu.edu/faculty/">Our Faculty</a></li>
-              <li>
-                <a href="https://svu.edu/academics/">Our Learning Model</a>
-              </li>
-              <li>
-                <a href="https://svu.edu/academics/#programs"
-                  >Programs & Degrees</a
-                >
-              </li>
-              <li>
-                <a href="https://svu.edu/academics/honors-program/"
-                  >Honors Program</a
-                >
-              </li>
-              <li><a href="https://catalog.svu.edu">Catalog</a></li>
+              <li><a href="">Our Faculty</a></li>
+              <li><a href="">Our Learning Model</a></li>
+              <li><a href="">Programs &amp;amp; Degrees</a></li>
+              <li><a href="">Honors Program</a></li>
+              <li><a href="">Catalog</a></li>
             </ul>
           </div>
           <div id="church_faith">
-            <h4>Church & Faith</h4>
+            <h4>Church &amp;amp; Faith</h4>
             <ul>
-              <!--<li><a href="">Church Alignment *</a></li>-->
-              <li>
-                <a href="https://svu.edu/campus-life/ysa-wards/"
-                  >YSA Stake & Wards</a
-                >
-              </li>
-              <li>
-                <a href="https://www.southernvirginiainstitute.com/"
-                  >Institute of Religion</a
-                >
-              </li>
-              <li>
-                <a href="https://svu.edu/campus-life/missionaries/"
-                  >Missionaries</a
-                >
-              </li>
+              <li><a href="">Church Alignment</a></li>
+              <li><a href="">YSA Stake &amp;amp; Wards</a></li>
+              <li><a href="">Institute of Religion</a></li>
+              <li><a href="">Missionaries</a></li>
             </ul>
           </div>
           <div id="giving">
@@ -379,7 +355,7 @@
             </ul>
           </div>
           <div id="tuition_aid">
-            <h4>Tuition & Aid</h4>
+            <h4>Tuition &amp; Aid</h4>
             <ul>
               <li>
                 <a href="https://svu.edu/admissions/financial-services/"
@@ -388,12 +364,12 @@
               </li>
               <li>
                 <a href="https://svu.edu/admissions/scholarships-and-aid/"
-                  >Scholarships & Aid</a
+                  >Scholarships &amp; Aid</a
                 >
               </li>
               <li>
                 <a href="https://svu.edu/admissions/tuition-and-payments/"
-                  >Tution & Payments</a
+                  >Tution &amp; Payments</a
                 >
               </li>
               <li>
@@ -455,17 +431,33 @@
         </div>
       </div>
     </div>
-    <div id="left.background" style="z-index: -1;" class="leftBackground"></div>
-  </div>
+    <div id="left-background" class="bg bg-left"></div>
+    <div id="right-background" class="bg bg-right"></div>
+  </nav>
+
 </template>
 
 <script>
 export default {
   methods: {
-    return: null
+    closeNav() {
+      const nav = document.getElementById("nav");
+
+      const leftBg = document.getElementById("left-background");
+      const rightBg = document.getElementById("right-background");
+
+      nav.style.display = "none";
+
+      leftBg.style.width = 0;
+      rightBg.style.width = 0;
+    },
+    openNav() {
+      
+    }
   }
-};
+}
 </script>
+
 <style>
 *,
 *::before,
@@ -482,6 +474,35 @@ li {
 a {
   text-decoration: none;
 }
+
+nav {
+  max-width: 1600px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.bg {
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+  transition: .3s all ease;
+}
+
+.bg-left {
+  background-color: #9e1b32;
+  top: 0;
+  left: 0;
+  width: 50%;
+  z-index: -1;
+}
+
+.bg-right {
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+}
+
 .nav {
   width: 100%;
 }
@@ -521,14 +542,7 @@ div.bottomArrow > div > img {
   justify-content: space-between;
   padding: 10% 5% 5% 5%;
 }
-.leftBackground {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  background-color: #9e1b32;
-  top: 0;
-  left: 0;
-}
+
 .rightheader {
   width: 100%;
   padding: 10% 5% 5% 5%;
