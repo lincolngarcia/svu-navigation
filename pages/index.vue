@@ -1,4 +1,5 @@
 <template>
+
   <nav id="nav.encapsulation" style="max-width: 1600px; margin: 0 auto;">
     <div id="nav" class="nav flex">
       <div id="nav.left" class="left">
