@@ -19,12 +19,45 @@
                       class="ContactUsImage"
                       src="~/assets/svg/Arrow+Circle.svg"
                   /></a>
-                  <a id="nav.content.header.whiteX" class="standardText whiteX">
-                    <img
-                      class="whiteX"
-                      src="~/assets/svg/Close Menu Icon White.svg"
-                    />
-                  </a>
+                  <div
+                    @click="closeNav"
+                    id="nav.content.header.whiteX"
+                    class="standardText whiteX"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18.828"
+                      height="18.828"
+                      viewBox="0 0 18.828 18.828"
+                    >
+                      <g
+                        id="Close_Menu_Icon"
+                        data-name="Close Menu Icon"
+                        transform="translate(1.414 1.414)"
+                      >
+                        <line
+                          id="Line_42"
+                          data-name="Line 42"
+                          y1="16"
+                          x2="16"
+                          fill="none"
+                          stroke="#fff"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                        />
+                        <line
+                          id="Line_43"
+                          data-name="Line 43"
+                          x1="16"
+                          y1="16"
+                          fill="none"
+                          stroke="#fff"
+                          stroke-linecap="round"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -741,7 +774,10 @@ div.rightContentItems > div > ul > li > a {
 }
 
 @media screen and (max-width: 900px) {
-  div.nav {
+  .bg-right {
+    height: 200%;
+  }
+  .nav.open {
     display: block;
   }
   div.right {
@@ -751,7 +787,7 @@ div.rightContentItems > div > ul > li > a {
   .leftheader {
     width: 100%;
   }
-  .leftBackground {
+  .bg-left {
     display: none;
   }
   .rightheader,
