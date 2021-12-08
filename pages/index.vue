@@ -803,7 +803,7 @@ div.rightContentItems > div > ul > li > a {
     font-size: 32px;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   #academics {
     order: 1;
   }
