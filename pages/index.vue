@@ -10,19 +10,11 @@
             />
             <div id="nav.content.header.contactUs" class="flex topAlign">
               <div class="flex">
-                <a class="standardText topalignChild">Apply</a>
-                <a class="standardText topalignChild">Visit</a>
                 <div class="topalignChild">
-                  <a class="standardText contactUs" href=""
-                    >Contact Us
-                    <img
-                      class="ContactUsImage"
-                      src="~/assets/svg/Arrow+Circle.svg"
-                  /></a>
                   <div
                     @click="closeNav"
                     id="nav.content.header.whiteX"
-                    class="standardText whiteX"
+                    class="whiteX"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -275,10 +267,10 @@
                 </li>
               </ul>
             </div>
-            <br />
-            <p class="standardText">News</p>
-            <p class="standardText">Calendar &amp; Events</p>
-            <br />
+            <div style="margin: 10% 0">
+              <p class="standardText">News</p>
+              <p class="standardText">Calendar &amp; Events</p>
+            </div>
             <div id="nav.left.footer" class="bottomArrow">
               <img src="~/assets/svg/arrow-down.svg" />
             </div>
@@ -287,7 +279,69 @@
 
         <div id="nav.right" class="relative right">
           <div id="nav.right.header" class="flex rightheader">
-            <div @click="closeNav" class="cursor-pointer">
+            <div class="actionCalls">
+              <a class="actionCall topAlignChild">Apply</a>
+              <a class="actionCall topALignChild">Visit</a>
+              <a class="actionCall contactUs" href=""
+                >Contact Us
+                <svg
+                  id="Arrow_Circle"
+                  data-name="Arrow+Circle"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 40 40"
+                >
+                  <g
+                    id="Ellipse_4"
+                    data-name="Ellipse 4"
+                    fill="none"
+                    stroke="var(--svu-red)"
+                    stroke-linecap="round"
+                    stroke-width="1.5"
+                    transform="translate(6.5 6)"
+                  >
+                    <circle cx="13.5" cy="13.5" r="13.5" stroke="none" />
+                    <circle cx="13.5" cy="13.5" r="12.75" fill="noned" />
+                  </g>
+                  <g id="Arrow" transform="translate(13 15)">
+                    <line
+                      id="Line_38"
+                      data-name="Line 38"
+                      x2="13.5"
+                      transform="translate(0 4.5)"
+                      fill="none"
+                      stroke="var(--svu-red)"
+                      stroke-linecap="round"
+                      stroke-width="1.5"
+                    />
+                    <line
+                      id="Line_39"
+                      data-name="Line 39"
+                      x2="4.5"
+                      y2="4.5"
+                      transform="translate(9)"
+                      fill="none"
+                      stroke="var(--svu-red)"
+                      stroke-linecap="round"
+                      stroke-width="1.5"
+                    />
+                    <line
+                      id="Line_40"
+                      data-name="Line 40"
+                      y1="4.5"
+                      x2="4.5"
+                      transform="translate(9 4.5)"
+                      fill="none"
+                      stroke="var(--svu-red)"
+                      stroke-linecap="round"
+                      stroke-width="1.5"
+                    />
+                  </g>
+                </svg>
+              </a>
+            </div>
+            <div @click="closeNav" class="redClose cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="19"
@@ -305,7 +359,7 @@
                     y1="16"
                     x2="16"
                     fill="none"
-                    stroke="#9e1b32"
+                    stroke="var(--svu-red)"
                     stroke-linecap="round"
                     stroke-width="2"
                   />
@@ -315,7 +369,7 @@
                     x1="16"
                     y1="16"
                     fill="none"
-                    stroke="#9e1b32"
+                    stroke="var(--svu-red)"
                     stroke-linecap="round"
                     stroke-width="2"
                   />
@@ -545,6 +599,9 @@ export default {
 </script>
 
 <style>
+:root {
+  --svu-red: #9e1b32;
+}
 *,
 *::before,
 *::after {
@@ -622,7 +679,7 @@ nav {
 }
 
 .bg-left {
-  background-color: #9e1b32;
+  background-color: var(--svu-red);
   top: 0;
   left: 0;
   width: 0;
@@ -649,7 +706,8 @@ nav {
 .cursor-pointer:hover {
   cursor: pointer;
 }
-
+.redClose {
+}
 .flex {
   display: flex;
 }
@@ -674,7 +732,7 @@ div.bottomArrow > div > img {
 }
 .left {
   min-width: 50%;
-  background-color: #9e1b32;
+  background-color: var(--svu-red);
 }
 .left-padding {
   padding: 5% 20%;
@@ -689,10 +747,24 @@ div.bottomArrow > div > img {
 
 .rightheader {
   width: 100%;
-  padding: 10% 5% 5% 5%;
-  justify-content: flex-end;
+  padding: 10% 5% 5% 8%;
+  display: flex;
+  justify-content: space-between;
   min-height: 4rem;
   max-width: 799px;
+}
+.actionCalls {
+  display: flex;
+}
+.actionCall {
+  color: var(--svu-red);
+  font-family: "Avenir Next";
+  font-size: 18px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.actionCall:not(last-child) {
+  margin-right: 50px;
 }
 .mainLogo {
   max-width: 133px;
@@ -728,7 +800,6 @@ div.bottomArrow > div > img {
   font-weight: 600;
   font-family: "Avenir Next";
   font-size: 18px;
-  margin-bottom: 10%;
 }
 ul.leftContentItems > li {
   white-space: nowrap;
@@ -748,7 +819,7 @@ ul.leftContentItems > li > a {
   padding: 10% 5% 5% 8%;
 }
 div.rightContentItems > div > h4 {
-  color: #9e1b32;
+  color: var(--svu-red);
   font-family: "Avenir Next";
   font-size: 18px;
   font-weight: 400;
@@ -790,9 +861,15 @@ div.rightContentItems > div > ul > li > a {
   .bg-left {
     display: none;
   }
-  .rightheader,
-  .contactUs {
+  .redClose {
     display: none;
+  }
+  .actionCalls {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .rightheader {
+    padding: 78px 28px 28px 28px;
   }
   .whiteX,
   .bottomArrow {
@@ -844,7 +921,7 @@ div.rightContentItems > div > ul > li > a {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
     gap: 28px 16px;
-    padding: 78px 28px 28px 28px;
+    padding: 28px 28px 28px 28px;
   }
 
   div.rightContentItems > div,
