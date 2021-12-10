@@ -280,9 +280,9 @@
         <div id="nav.right" class="relative right">
           <div id="nav.right.header" class="flex rightheader">
             <div class="actionCalls">
-              <a class="actionCall topAlignChild">Apply</a>
-              <a class="actionCall topALignChild">Visit</a>
-              <a class="actionCall contactUs" href=""
+              <a class="actionCall topAlignChild" href='https://svu.edu/application/'>Apply</a>
+              <a class="actionCall topALignChild" href='https://svu.edu/admissions/visit/'>Visit</a>
+              <a class="actionCall contactUs" href="https://svu.edu/admissions/contact/"
                 >Contact Us
                 <svg
                   id="Arrow_Circle"
