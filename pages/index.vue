@@ -280,9 +280,19 @@
         <div id="nav.right" class="relative right">
           <div id="nav.right.header" class="flex rightheader">
             <div class="actionCalls">
-              <a class="actionCall topAlignChild" href='https://svu.edu/application/'>Apply</a>
-              <a class="actionCall topALignChild" href='https://svu.edu/admissions/visit/'>Visit</a>
-              <a class="actionCall contactUs" href="https://svu.edu/admissions/contact/"
+              <a
+                class="actionCall topAlignChild"
+                href="https://svu.edu/application/"
+                >Apply</a
+              >
+              <a
+                class="actionCall topALignChild"
+                href="https://svu.edu/admissions/visit/"
+                >Visit</a
+              >
+              <a
+                class="actionCall contactUs"
+                href="https://svu.edu/admissions/contact/"
                 >Contact Us
                 <svg
                   id="Arrow_Circle"
@@ -382,20 +392,41 @@
               <h4>Academics</h4>
               <!-- create dynmaic loading -->
               <ul>
-                <li><a href="">Our Faculty</a></li>
-                <li><a href="">Our Learning Model</a></li>
-                <li><a href="">Programs &amp; Degrees</a></li>
-                <li><a href="">Honors Program</a></li>
-                <li><a href="">Catalog</a></li>
+                <li><a href="https://svu.edu/faculty/">Our Faculty</a></li>
+                <li>
+                  <a href="https://svu.edu/academics/">Our Learning Model</a>
+                </li>
+                <li>
+                  <a href="https://svu.edu/academics/#programs"
+                    >Programs & Degrees</a
+                  >
+                </li>
+                <li>
+                  <a href="https://svu.edu/academics/honors-program/"
+                    >Honors Program</a
+                  >
+                </li>
+                <li><a href="https://catalog.svu.edu">Catalog</a></li>
               </ul>
             </div>
             <div id="church_faith">
               <h4>Church &amp; Faith</h4>
               <ul>
-                <li><a href="">Church Alignment</a></li>
-                <li><a href="">YSA Stake &amp; Wards</a></li>
-                <li><a href="">Institute of Religion</a></li>
-                <li><a href="">Missionaries</a></li>
+                <li>
+                  <a href="https://svu.edu/campus-life/ysa-wards/"
+                    >YSA Stake & Wards</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.southernvirginiainstitute.com/"
+                    >Institute of Religion</a
+                  >
+                </li>
+                <li>
+                  <a href="https://svu.edu/campus-life/missionaries/"
+                    >Missionaries</a
+                  >
+                </li>
               </ul>
             </div>
             <div id="giving">
@@ -705,8 +736,6 @@ nav {
 
 .cursor-pointer:hover {
   cursor: pointer;
-}
-.redClose {
 }
 .flex {
   display: flex;
