@@ -314,7 +314,7 @@
                     <circle cx="13.5" cy="13.5" r="13.5" stroke="none"></circle>
                     <circle cx="16" cy="16" r="16" fill="noned"></circle>
                   </g>
-                  <g id="Arrow" transform="translate(15 17)">
+                  <g id="Arrow" transform="translate(15 18)">
                     <line
                       id="Line_38"
                       data-name="Line 38"
