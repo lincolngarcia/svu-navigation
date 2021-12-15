@@ -300,7 +300,7 @@
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
                   height="20"
-                  viewBox="0 0 40 40"
+                  viewBox="0 2 40 40"
                 >
                   <g
                     id="Ellipse_4"
@@ -311,42 +311,42 @@
                     stroke-width="1.5"
                     transform="translate(6.5 6)"
                   >
-                    <circle cx="13.5" cy="13.5" r="13.5" stroke="none" />
-                    <circle cx="13.5" cy="13.5" r="12.75" fill="noned" />
+                    <circle cx="13.5" cy="13.5" r="13.5" stroke="none"></circle>
+                    <circle cx="16" cy="16" r="16" fill="noned"></circle>
                   </g>
-                  <g id="Arrow" transform="translate(13 15)">
+                  <g id="Arrow" transform="translate(15 17)">
                     <line
                       id="Line_38"
                       data-name="Line 38"
-                      x2="13.5"
+                      x2="15"
                       transform="translate(0 4.5)"
                       fill="none"
                       stroke="var(--svu-red)"
                       stroke-linecap="round"
                       stroke-width="1.5"
-                    />
+                    ></line>
                     <line
                       id="Line_39"
                       data-name="Line 39"
-                      x2="4.5"
-                      y2="4.5"
-                      transform="translate(9)"
+                      x2="5"
+                      transform="translate(9.5 -1)"
                       fill="none"
                       stroke="var(--svu-red)"
                       stroke-linecap="round"
                       stroke-width="1.5"
-                    />
+                      y2="5"
+                    ></line>
                     <line
                       id="Line_40"
                       data-name="Line 40"
-                      y1="4.5"
-                      x2="4.5"
-                      transform="translate(9 4.5)"
+                      y1="5"
+                      x2="5"
+                      transform="translate(9.5 5)"
                       fill="none"
                       stroke="var(--svu-red)"
                       stroke-linecap="round"
                       stroke-width="1.5"
-                    />
+                    ></line>
                   </g>
                 </svg>
               </a>
