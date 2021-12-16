@@ -894,7 +894,7 @@ div.rightContentItems > div > ul > li > a {
     display: none;
   }
   .actionCalls {
-    width: 100%;
+    width: 60%;
     justify-content: space-between;
   }
   .rightheader {
