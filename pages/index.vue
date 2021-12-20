@@ -787,9 +787,9 @@ div.bottomArrow > div > img {
 }
 .actionCall {
   color: var(--svu-red);
+  font-weight: 600;
   font-family: "Avenir Next";
   font-size: 18px;
-  font-weight: 400;
   white-space: nowrap;
 }
 .actionCall:not(last-child) {
@@ -957,8 +957,8 @@ div.rightContentItems > div > ul > li > a {
   .left-padding {
     padding: 5% 10%;
   }
-  .rightheader{
-  padding: 56px 28px 28px 28px;
+  .rightheader {
+    padding: 56px 28px 28px 28px;
   }
   .bg-right {
     height: 250%;
