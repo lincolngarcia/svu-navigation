@@ -897,9 +897,6 @@ div.rightContentItems > div > ul > li > a {
     width: 60%;
     justify-content: space-between;
   }
-  .rightheader {
-    padding: 78px 28px 28px 28px;
-  }
   .whiteX,
   .bottomArrow {
     display: flex;
@@ -957,9 +954,14 @@ div.rightContentItems > div > ul > li > a {
   div.rightContentItems > div > ul > li > a {
     min-width: 0;
   }
-
   .left-padding {
     padding: 5% 10%;
+  }
+  .rightheader{
+  padding: 56px 28px 28px 28px;
+  }
+  .bg-right {
+    height: 250%;
   }
 }
 </style>
