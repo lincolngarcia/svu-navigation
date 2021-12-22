@@ -712,26 +712,26 @@ nav {
 .bg-left {
   background-color: var(--svu-red);
   top: 0;
-  left: 0;
+  right: 0;
   width: 0;
-  z-index: -1;
   transition: 0.3s all ease-in-out;
 }
 
 .bg-right {
   top: 0;
-  left: 0;
+  right: 0;
   width: 0;
   background-color: white;
+  z-index: -1;
   transition: 0.4s all ease-in-out;
 }
 
 .bg-left.open {
-  width: 50%;
+  width: 100%;
 }
 
 .bg-right.open {
-  width: 100%;
+  width: 50%;
 }
 
 .cursor-pointer:hover {
